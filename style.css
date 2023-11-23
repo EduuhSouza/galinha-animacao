@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+body{
+    /* background: linear-gradient(45deg, red,purple, gold, orange) no-repeat; */
+    background-image: url(https://pbs.twimg.com/media/FB_IB6WWQAk6E_-.jpg);
+    background-size: 100% 100%;
+    height: 100vh;
+    background-position: top;
+    overflow: hidden;
+    /* animation: gradiente 5s infinite  ; */
+}
+
+img{
+    width: 180px;
+    position: absolute;
+    bottom: 5px;
+    /* animation-name: move ;
+    animation-duration: 7s;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-delay: .5s ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: backwards;
+    animation-play-state: running; */
+    animation: move 7s ease infinite alternate;
+
+}
+
+img:hover{
+    animation-play-state: paused;
+}
+
+@keyframes move {
+
+    from{
+        transform: translateX(0);
+    }
+    
+    to{
+        transform: translateX(80vw);
+    }
+
+}
+
+@keyframes gradiente {
+
+    from{
+        background-position: 0 50%;
+
+    }
+    
+    to{
+        background-position: 100% 50%;
+    }
+
+}
